@@ -27,12 +27,13 @@ do commit e evite outras formas de merge para manter o histórico simples.
 
 Após a primeira execução da CI, configure a proteção de `main`:
 
-- Exigir PR para alterar a branch e resolver as conversas antes do merge.
+- Exigir PR para alterar a branch, inclusive para administradores, e resolver as conversas antes
+  do merge.
 - Exigir os checks **Qualidade do pacote** e **Título do PR**, escolhendo os resultados da CI de PR.
 - Exigir branch atualizada antes do merge; bloquear force push e exclusão.
-- Com outro revisor disponível, exigir pelo menos uma aprovação e invalidar aprovações antigas
-  quando houver mudanças. Trabalhando sozinho, não exija aprovação de outro usuário: o autor
-  não pode aprovar o próprio PR. Revise o diff e os checks antes de mesclar.
+- Não exigir aprovação. O GitHub não deixa o autor aprovar o próprio PR, e cada mantenedor precisa
+  mesclar sozinho quando o outro estiver ausente. Revise o diff e os checks antes de mesclar; peça
+  a revisão do outro mantenedor quando ele estiver disponível.
 
 A disponibilidade de proteção depende do plano e da visibilidade do repositório.
 [Documentação de branches protegidas](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches).
