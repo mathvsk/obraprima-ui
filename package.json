@@ -1,0 +1,48 @@
+{
+  "name": "@mathvsk/obraprima-ui",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Componentes React compartilhados entre o desktop e o mobile do Obra Prima, com CSS e tipos TypeScript.",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathvsk/obraprima-ui.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./estilos.css": {
+      "types": "./dist/estilos.css.d.ts",
+      "default": "./dist/estilos.css"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "node scripts/preparar-dist.mjs && tsc -p tsconfig.build.json",
+    "lint": "oxlint --type-aware",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run lint && npm run build",
+    "prepack": "npm run build"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "oxlint": "1.89.0",
+    "oxlint-tsgolint": "7.0.2004",
+    "react": "19.3.1",
+    "typescript": "7.0.2"
+  }
+}

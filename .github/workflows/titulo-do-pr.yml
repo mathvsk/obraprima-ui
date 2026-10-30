@@ -1,0 +1,22 @@
+name: Conferir título do PR
+
+# O título vira o commit do squash, e o release-please ignora commits fora do Conventional Commits.
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  titulo:
+    name: Título do PR
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@9f698171ed81b15d1823a05fc7211befd50c8ae0 # v6.0.3
+        with:
+          persist-credentials: false
+      - run: node scripts/verificar-titulo-pr.mjs
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
