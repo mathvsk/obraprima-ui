@@ -1,0 +1,6 @@
+/* O campo herda a fonte da página; a vitrine reproduz a tipografia do consumidor. */
+body {
+  font-family: 'Open Sans', 'Segoe UI', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}

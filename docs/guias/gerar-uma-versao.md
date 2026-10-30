@@ -82,7 +82,7 @@ Para adotar `1.0.0`, revise o contrato estável e use o
 Depois da primeira publicação, confira o pacote em **Packages**. A visibilidade inicial é privada;
 configure quem pode instalar e conceda leitura às CIs consumidoras em **Manage Actions access**.
 A publicação usa o token automático do workflow; o acesso de leitura segue o
-guia do consumidor que acompanha a primeira entrega.
+[guia do consumidor](usar-num-consumidor.md).
 
 Cada aplicação instala a versão escolhida, versiona o lockfile, executa seus checks e faz sua entrega.
 A lib publicar uma versão não atualiza automaticamente desktop ou mobile.

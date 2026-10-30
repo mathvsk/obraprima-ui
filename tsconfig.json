@@ -8,5 +8,5 @@
     "skipLibCheck": true, "forceConsistentCasingInFileNames": true,
     "noEmit": true
   },
-  "include": ["src"]
+  "include": ["src", ".storybook", "vitest.config.ts", "vitest.setup.ts"]
 }

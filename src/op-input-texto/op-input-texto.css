@@ -1,0 +1,61 @@
+.op-input-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  min-width: 0;
+}
+
+.op-input-texto__rotulo {
+  color: var(--op-ui-texto-suave);
+  font-size: 12px;
+}
+
+.op-input-texto__campo {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 38px;
+  margin: 0;
+  padding: 8px 10px;
+  border: 1px solid var(--op-ui-borda);
+  border-radius: var(--op-ui-raio);
+  color: var(--op-ui-texto);
+  background: var(--op-ui-superficie);
+  font: inherit;
+}
+
+.op-input-texto__campo:focus {
+  border-color: var(--op-ui-foco);
+  box-shadow: 0 0 0 1px var(--op-ui-foco);
+  outline: none;
+}
+
+.op-input-texto__campo[aria-invalid='true'] {
+  border-color: var(--op-ui-erro);
+}
+
+.op-input-texto__campo[aria-invalid='true']:focus {
+  box-shadow: 0 0 0 1px var(--op-ui-erro);
+}
+
+.op-input-texto__campo:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.op-input-texto__erro {
+  margin: 0;
+  color: var(--op-ui-erro);
+  font-size: 12px;
+}
+
+/* O Safari do iOS aproxima a tela ao focar campo com fonte abaixo de 16px. pointer: coarse
+   sozinho também vale no Windows com toque, onde o campo ficaria maior que os vizinhos. */
+@media (pointer: coarse) {
+  @supports (-webkit-touch-callout: none) {
+    .op-input-texto__campo {
+      font-size: 16px;
+    }
+  }
+}

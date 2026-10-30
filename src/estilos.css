@@ -1,1 +1,2 @@
-/* A entrada de estilos receberá os tokens e o CSS dos componentes. */
+@import './tokens.css';
+@import './op-input-texto/op-input-texto.css';

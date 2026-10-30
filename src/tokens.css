@@ -1,0 +1,10 @@
+/* :where() permite sobrescrever o tema sem depender da ordem dos estilos. */
+:where(:root) {
+  --op-ui-superficie: #ffffff;
+  --op-ui-texto: #172033;
+  --op-ui-texto-suave: #647386;
+  --op-ui-borda: #d9e1e9;
+  --op-ui-foco: #225c86;
+  --op-ui-erro: #c9424d;
+  --op-ui-raio: 9px;
+}
